@@ -37,6 +37,17 @@ td.pos{color:var(--accent-ink)}
 .how{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin:10px 0 44px}
 .how-col h3{font-family:var(--display);font-size:1.05rem;font-weight:600;margin-bottom:6px}
 .how-col p{font-size:.9rem;color:#434b47}
+.faq{background:#fff;border:1px solid var(--rule);border-radius:6px;margin:0 0 44px;padding:28px}
+.faq-head{border-bottom:2px solid var(--ink);padding-bottom:20px}
+.faq-kicker{color:var(--accent-ink);font-size:.75rem;font-weight:500;letter-spacing:.04em;text-transform:uppercase;margin-bottom:6px}
+.faq-head h2{font-family:var(--display);font-size:1.45rem;font-weight:600;margin-bottom:6px}
+.faq-head>p:last-child{color:#4c5450;font-size:.92rem;max-width:620px}
+.faq-list{margin:0}
+.faq-item{display:grid;grid-template-columns:minmax(180px,.8fr) minmax(0,1.4fr);gap:28px;padding:20px 0;border-bottom:1px solid var(--rule)}
+.faq-item:last-child{border-bottom:none;padding-bottom:0}
+.faq-item dt{font-family:var(--display);font-size:1.02rem;font-weight:600;line-height:1.4}
+.faq-item dd{color:#434b47;font-size:.9rem}
+.faq-item a{color:var(--accent-ink);overflow-wrap:anywhere}
 dialog{border:2px solid var(--ink);border-radius:6px;padding:26px;max-width:520px;width:92%}
 dialog::backdrop{background:rgba(28,35,32,.45)}
 dialog h2{font-family:var(--display);margin-bottom:14px}
@@ -49,5 +60,5 @@ dialog h2{font-family:var(--display);margin-bottom:14px}
 .fineprint{margin-top:14px;font-size:.78rem;color:#5a6360}
 .foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid var(--rule);padding-top:16px;padding-bottom:30px;font-size:.82rem;color:#5a6360}
 .foot a{color:var(--accent-ink)}
-@media(max-width:640px){.how{grid-template-columns:1fr}.result-head{flex-direction:column}}
+@media(max-width:640px){.how{grid-template-columns:1fr}.result-head{flex-direction:column}.faq{padding:22px 20px}.faq-item{grid-template-columns:1fr;gap:7px}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}

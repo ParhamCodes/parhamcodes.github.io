@@ -68,6 +68,25 @@
 <div class="how-col"><h3>Any tabular statement</h3><p>The parser looks for date + amount patterns, so it handles most bank, card, and PayPal statements. If yours parses badly, tell us and we will add a rule for it.</p></div>
 <div class="how-col"><h3>Pay once, in stablecoins</h3><p>$7 in USDT on BNB Smart Chain unlocks everything, on every device you paste your receipt hash into. Payment is verified against the public chain, in your browser.</p></div>
 </section>
+<section class="faq" aria-labelledby="faqTitle">
+<div class="faq-head">
+<p class="faq-kicker mono">Privacy, formats, and payment</p>
+<h2 id="faqTitle">Questions before you convert</h2>
+<p>What happens to your statement, what the parser can read, and what the one-time unlock covers.</p>
+</div>
+<dl class="faq-list">
+<div class="faq-item"><dt>Is my statement really not uploaded?</dt><dd>Yes. pdf.js parses it inside your browser tab. There is no upload and no server receiving your file. Once the page loads, you can go offline and keep using it.</dd></div>
+<div class="faq-item"><dt>Which banks and statement formats work?</dt><dd>Most text-based bank, credit card, and PayPal statement PDFs work if transactions have a date and amount. The parser extracts the date, description, amount, and running balance when one is present.</dd></div>
+<div class="faq-item"><dt>What if it misreads my bank?</dt><dd>Use the free 15-row preview to check the result before paying. If a row is wrong, email the statement layout, not your financial data, to <a href="mailto:parham125889+gigs@gmail.com">parham125889+gigs@gmail.com</a>. A parsing rule is usually added the same day.</dd></div>
+<div class="faq-item"><dt>Does it work on scanned or photographed statements?</dt><dd>No. There is no OCR, so image-only PDFs will not parse. It needs a text-based PDF, which is the format banks normally provide for downloaded statements.</dd></div>
+<div class="faq-item"><dt>How does the $7 payment work?</dt><dd>Send 7 USDT once on BNB Smart Chain, then paste the transaction hash. The payment is checked against the public chain in your browser. There is no account, card, or subscription. Your transaction hash is your license.</dd></div>
+<div class="faq-item"><dt>What if I do not use crypto?</dt><dd>Payment is currently crypto only, using USDT on BNB Smart Chain. If that blocks you from using the tool, say so at <a href="mailto:parham125889+gigs@gmail.com">parham125889+gigs@gmail.com</a>.</dd></div>
+<div class="faq-item"><dt>Is the unlock permanent, and do you offer refunds?</dt><dd>The unlock is permanent and tied to your transaction hash. You can reuse it on any device by pasting the hash. Test your bank with the free preview before paying, since it lets you verify the parse quality first.</dd></div>
+</dl>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is my statement really not uploaded?","acceptedAnswer":{"@type":"Answer","text":"Yes. pdf.js parses it inside your browser tab. There is no upload and no server receiving your file. Once the page loads, you can go offline and keep using it."}},{"@type":"Question","name":"Which banks and statement formats work?","acceptedAnswer":{"@type":"Answer","text":"Most text-based bank, credit card, and PayPal statement PDFs work if transactions have a date and amount. The parser extracts the date, description, amount, and running balance when one is present."}},{"@type":"Question","name":"What if it misreads my bank?","acceptedAnswer":{"@type":"Answer","text":"Use the free 15-row preview to check the result before paying. If a row is wrong, email the statement layout, not your financial data, to parham125889+gigs@gmail.com. A parsing rule is usually added the same day."}},{"@type":"Question","name":"Does it work on scanned or photographed statements?","acceptedAnswer":{"@type":"Answer","text":"No. There is no OCR, so image-only PDFs will not parse. It needs a text-based PDF, which is the format banks normally provide for downloaded statements."}},{"@type":"Question","name":"How does the $7 payment work?","acceptedAnswer":{"@type":"Answer","text":"Send 7 USDT once on BNB Smart Chain, then paste the transaction hash. The payment is checked against the public chain in your browser. There is no account, card, or subscription. Your transaction hash is your license."}},{"@type":"Question","name":"What if I do not use crypto?","acceptedAnswer":{"@type":"Answer","text":"Payment is currently crypto only, using USDT on BNB Smart Chain. If that blocks you from using the tool, say so at parham125889+gigs@gmail.com."}},{"@type":"Question","name":"Is the unlock permanent, and do you offer refunds?","acceptedAnswer":{"@type":"Answer","text":"The unlock is permanent and tied to your transaction hash. You can reuse it on any device by pasting the hash. Test your bank with the free preview before paying, since it lets you verify the parse quality first."}}]}
+</script>
+</section>
 <dialog id="payDialog">
 <h2>Unlock Statement2CSV</h2>
 <ol class="paysteps">
