@@ -60,5 +60,22 @@ dialog h2{font-family:var(--display);margin-bottom:14px}
 .fineprint{margin-top:14px;font-size:.78rem;color:#5a6360}
 .foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid var(--rule);padding-top:16px;padding-bottom:30px;font-size:.82rem;color:#5a6360}
 .foot a{color:var(--accent-ink)}
-@media(max-width:640px){.how{grid-template-columns:1fr}.result-head{flex-direction:column}.faq{padding:22px 20px}.faq-item{grid-template-columns:1fr;gap:7px}}
+.guide-nav{display:flex;gap:18px;flex-wrap:wrap;padding-top:12px;padding-bottom:12px;border-bottom:1px solid var(--rule);font-family:var(--mono);font-size:.76rem}
+.guide-nav a{color:var(--accent-ink);text-underline-offset:3px}
+.article{max-width:720px;margin:42px auto 48px;background:#fff;border:1px solid var(--rule);border-radius:6px;padding:38px 42px}
+.article-head{border-bottom:2px solid var(--ink);padding-bottom:24px;margin-bottom:26px}
+.article-kicker{font-family:var(--mono);font-size:.74rem;font-weight:500;letter-spacing:.04em;text-transform:uppercase;color:var(--accent-ink);margin-bottom:8px}
+.article h1{font-family:var(--display);font-size:clamp(2rem,5vw,3.15rem);line-height:1.08;letter-spacing:-.025em;font-weight:600}
+.article h2{font-family:var(--display);font-size:1.35rem;line-height:1.25;font-weight:600;margin:30px 0 9px}
+.article p{margin-bottom:16px;color:#343c38;line-height:1.72}
+.article ol{padding-left:22px;margin:0 0 18px}
+.article li{padding-left:5px;margin-bottom:11px;line-height:1.65}
+.article a{color:var(--accent-ink)}
+.article-note{border-left:3px solid var(--accent);background:#f4faf7;padding:15px 18px;margin:22px 0;font-size:.92rem}
+.article-note p:last-child{margin-bottom:0}
+.csv-sample{display:block;background:#f1efe8;border:1px solid var(--rule);border-radius:4px;padding:13px 15px;margin:18px 0 22px;overflow-x:auto;font-family:var(--mono);font-size:.78rem;line-height:1.7;white-space:pre}
+.article-cta{border-top:2px solid var(--ink);margin-top:32px;padding-top:24px}
+.article-cta h2{margin-top:0}
+.article-cta .btn{display:inline-block;text-decoration:none;margin-top:2px}
+@media(max-width:640px){.how{grid-template-columns:1fr}.result-head{flex-direction:column}.faq{padding:22px 20px}.faq-item{grid-template-columns:1fr;gap:7px}.guide-nav{gap:10px 16px}.article{margin:24px auto 36px;padding:28px 22px}.article h1{font-size:2rem}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Convert a bank statement to CSV without uploading it anywhere | Statement2CSV</title>
+<meta name="description" content="Convert a bank statement PDF locally in your browser, understand how client-side processing protects the file, and verify that no upload occurs.">
+<link rel="canonical" href="https://parhamcodes.github.io/statement2csv/convert-without-uploading.html">
+<meta name="theme-color" content="#0f6b4f">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Statement2CSV">
+<meta property="og:title" content="Convert a bank statement to CSV without uploading it anywhere">
+<meta property="og:description" content="See how in-browser PDF conversion differs from server uploads and how to verify the privacy claim yourself.">
+<meta property="og:url" content="https://parhamcodes.github.io/statement2csv/convert-without-uploading.html">
+<meta property="og:image" content="https://parhamcodes.github.io/statement2csv/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://parhamcodes.github.io/statement2csv/"},{"@type":"ListItem","position":2,"name":"Convert without uploading","item":"https://parhamcodes.github.io/statement2csv/convert-without-uploading.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Convert a bank statement to CSV without uploading it anywhere","description":"How local browser processing avoids sending a bank statement to a conversion server, plus practical ways to verify it.","datePublished":"2026-07-20","dateModified":"2026-07-20","author":{"@type":"Person","name":"Parham"},"publisher":{"@type":"Organization","name":"Statement2CSV"},"mainEntityOfPage":"https://parhamcodes.github.io/statement2csv/convert-without-uploading.html","image":"https://parhamcodes.github.io/statement2csv/og-image.png"}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+<div class="wrap">
+<span class="brand">Statement2CSV</span>
+<span class="tagline">bank statements &rarr; spreadsheets, without uploading them anywhere</span>
+</div>
+</header>
+<nav class="guide-nav wrap" aria-label="Guides">
+<a href="./">Conversion tool</a>
+<a href="how-it-works.html">How it works</a>
+<a href="convert-without-uploading.html" aria-current="page">Convert privately</a>
+<a href="bank-statement-to-excel.html">PDF to Excel</a>
+</nav>
+<main class="wrap">
+<article class="article">
+<header class="article-head">
+<p class="article-kicker">Guide 02 / File privacy</p>
+<h1>Convert a bank statement to CSV without uploading it anywhere</h1>
+</header>
+<p>A bank statement contains more than a list of purchases. It may include your name, address, account details, salary, transfers, merchant history, and current balance. That makes the way a converter handles the file worth checking before you use it.</p>
+<h2>What an upload-based converter asks you to trust</h2>
+<p>With a typical online converter, selecting a file starts an upload to a server. The service must receive and process the complete statement before it can return a spreadsheet. A promise such as "files are deleted after conversion" may limit storage time, but it does not change the fact that the document was transmitted and handled outside your computer.</p>
+<p>That processing can involve logs, temporary storage, backups, or a separate OCR provider. None of those practices automatically makes a service unsafe, but they expand the number of systems and policies you must trust. For a document with detailed financial information, avoiding the transfer altogether is a simpler privacy boundary.</p>
+<h2>How local browser conversion is different</h2>
+<p>A client-side converter runs the parsing code in the browser tab you already have open. In Statement2CSV, JavaScript reads the selected file through the browser's local file API. pdf.js extracts the text, and the transaction parser builds the rows in memory on your device. The PDF itself and the extracted transaction data are not sent to a Statement2CSV server.</p>
+<p>The page still needs an internet connection to load the site and its required files the first time. After it has loaded, you can disconnect and convert a statement. The conversion continues because the work happens in the tab, not on a remote machine.</p>
+<div class="article-note">
+<p><strong>The practical distinction:</strong> a server converter sends the statement away for processing. A client-side converter brings the processing code to your browser and keeps the statement local.</p>
+</div>
+<h2>Verify the claim instead of taking it on trust</h2>
+<p>You can check the behavior with tools built into Chrome, Firefox, Edge, and Safari:</p>
+<ol>
+<li>Open the converter, then open the browser's developer tools.</li>
+<li>Select the <strong>Network</strong> tab and clear the existing request list.</li>
+<li>Choose a statement and wait for the preview to appear.</li>
+<li>Look for a new request that transfers your PDF or a large request body. There should not be one.</li>
+</ol>
+<p>For an even simpler test, load the converter first, switch your device to airplane mode or disable its network connection, then select the PDF. A local converter can still produce the preview and CSV while offline. If you inspect network traffic, remember that loading the page itself fetches normal site assets. The relevant point is that choosing the statement does not trigger a file upload.</p>
+<h2>The tradeoff: no server-side OCR</h2>
+<p>Keeping the entire process local has one important limit. Statement2CSV does not send pages to an OCR service, so it cannot read image-only scans, photographs, or screenshots. It needs a text-based statement PDF downloaded directly from your bank. Test by selecting a transaction description in your PDF viewer. If you can copy the words, the file is likely suitable.</p>
+<section class="article-cta">
+<h2>Keep the statement on your device</h2>
+<p>Load the tool, inspect the network activity if you want, then convert the first 15 rows at no cost.</p>
+<a class="btn" href="./">Try Statement2CSV free</a>
+</section>
+</article>
+</main>
+<footer class="wrap foot">
+<span>Built by <a href="https://parhamcodes.github.io">Parham</a>.</span>
+<span><a href="./">Open the conversion tool</a></span>
+</footer>
+</body>
+</html>

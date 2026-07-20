@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to get a bank statement PDF into Excel or Google Sheets | Statement2CSV</title>
+<meta name="description" content="A practical guide to converting a bank statement PDF to CSV, importing it into Excel or Google Sheets, and checking dates, amounts, and balances.">
+<link rel="canonical" href="https://parhamcodes.github.io/statement2csv/bank-statement-to-excel.html">
+<meta name="theme-color" content="#0f6b4f">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Statement2CSV">
+<meta property="og:title" content="How to get a bank statement PDF into Excel or Google Sheets">
+<meta property="og:description" content="Convert a bank PDF into transaction rows, import the CSV correctly, and check the fields that commonly cause errors.">
+<meta property="og:url" content="https://parhamcodes.github.io/statement2csv/bank-statement-to-excel.html">
+<meta property="og:image" content="https://parhamcodes.github.io/statement2csv/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://parhamcodes.github.io/statement2csv/"},{"@type":"ListItem","position":2,"name":"Bank statement to Excel","item":"https://parhamcodes.github.io/statement2csv/bank-statement-to-excel.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"How to get a bank statement PDF into Excel or Google Sheets","description":"A step-by-step guide to turning a text-based bank statement PDF into spreadsheet rows and importing the CSV correctly.","datePublished":"2026-07-20","dateModified":"2026-07-20","author":{"@type":"Person","name":"Parham"},"publisher":{"@type":"Organization","name":"Statement2CSV"},"mainEntityOfPage":"https://parhamcodes.github.io/statement2csv/bank-statement-to-excel.html","image":"https://parhamcodes.github.io/statement2csv/og-image.png"}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+<div class="wrap">
+<span class="brand">Statement2CSV</span>
+<span class="tagline">bank statements &rarr; spreadsheets, without uploading them anywhere</span>
+</div>
+</header>
+<nav class="guide-nav wrap" aria-label="Guides">
+<a href="./">Conversion tool</a>
+<a href="how-it-works.html">How it works</a>
+<a href="convert-without-uploading.html">Convert privately</a>
+<a href="bank-statement-to-excel.html" aria-current="page">PDF to Excel</a>
+</nav>
+<main class="wrap">
+<article class="article">
+<header class="article-head">
+<p class="article-kicker">Guide 03 / Spreadsheet import</p>
+<h1>How to get a bank statement PDF into Excel or Google Sheets</h1>
+</header>
+<p>Banks publish statements as PDFs because the format preserves a fixed page layout. Excel and Google Sheets need something different: one transaction per row, with separate fields for the date, description, amount, and balance. Copying a table from a PDF often mixes columns or drops rows, so a CSV conversion is usually more reliable.</p>
+<h2>1. Download the right statement</h2>
+<p>Sign in to your bank and download the original monthly or account statement as a PDF. Do not use a screenshot, phone photo, or scan of a printed page. The PDF should contain real text. Check by selecting a transaction description in your PDF viewer and copying it into a text editor. If the words paste correctly, the file is likely suitable.</p>
+<p>If you cannot select text, the statement is image-only and needs OCR. Statement2CSV does not use OCR because it performs the conversion locally in your browser without sending the file to a server.</p>
+<h2>2. Convert the PDF to CSV</h2>
+<p>Open Statement2CSV, choose the PDF, and wait for the transaction preview. The tool reads the PDF locally with JavaScript and extracts the date, description, transaction amount, and running balance when one is present. Nothing in the statement is uploaded. The first 15 rows are free, which is enough to check whether your bank's layout is being interpreted correctly.</p>
+<div class="article-note">
+<p><strong>Before exporting:</strong> compare the preview with the original PDF. Check at least one debit, one credit, and a row with a balance. A payment should not accidentally appear as the running balance.</p>
+</div>
+<h2>3. Import the CSV into Excel</h2>
+<ol>
+<li>Open Excel and choose <strong>Data &gt; From Text/CSV</strong>.</li>
+<li>Select the downloaded CSV file.</li>
+<li>Confirm that the file origin and encoding preserve the transaction descriptions.</li>
+<li>Set the delimiter to <strong>Comma</strong> if Excel does not detect it.</li>
+<li>Review the preview, then choose <strong>Load</strong>.</li>
+</ol>
+<p>Using the Data import flow is safer than double-clicking the CSV because it lets you inspect how Excel will split and type the columns before adding them to a workbook.</p>
+<h2>4. Import the CSV into Google Sheets</h2>
+<ol>
+<li>Open a new or existing spreadsheet.</li>
+<li>Choose <strong>File &gt; Import &gt; Upload</strong>.</li>
+<li>Select the CSV and choose whether to create a new sheet or replace the current one.</li>
+<li>Leave the separator on automatic detection, or choose <strong>Comma</strong> if the preview shows one long column.</li>
+<li>Select <strong>Import data</strong>.</li>
+</ol>
+<h2>Check the spreadsheet before using it</h2>
+<p>Look at the amount and balance columns first. The amount is the change caused by one transaction, while the running balance is the account total after it. Withdrawals should normally be negative. If those columns are reversed, totals and cash flow calculations will be wrong.</p>
+<p>Also check dates before sorting. A value such as 04/07/2026 can mean April 7 or July 4 depending on the bank's format and your spreadsheet locale. The converter keeps the bank's printed date format, so set the spreadsheet column to the intended locale if it interprets dates incorrectly.</p>
+<p>If every row appears in one column, the delimiter was not detected. Reimport the file and choose comma. If descriptions containing commas split into extra columns, use the import command rather than pasting raw text, since the CSV correctly quotes description fields.</p>
+<section class="article-cta">
+<h2>Turn your PDF into rows</h2>
+<p>Convert locally, inspect the free 15-row preview, then import the CSV into the spreadsheet you already use.</p>
+<a class="btn" href="./">Try Statement2CSV free</a>
+</section>
+</article>
+</main>
+<footer class="wrap foot">
+<span>Built by <a href="https://parhamcodes.github.io">Parham</a>.</span>
+<span><a href="./">Open the conversion tool</a></span>
+</footer>
+</body>
+</html>
