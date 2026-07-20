@@ -58,6 +58,9 @@ dialog h2{font-family:var(--display);margin-bottom:14px}
 .payrow{display:flex;gap:10px}
 .paystatus{margin-top:12px;font-size:.82rem;min-height:1.2em}
 .fineprint{margin-top:14px;font-size:.78rem;color:#5a6360}
+.guide-links{display:flex;gap:20px;flex-wrap:wrap;padding-top:8px;font-family:var(--mono);font-size:.78rem}
+.guide-links a{color:var(--accent-ink);text-decoration:none;border-bottom:1px solid var(--rule)}
+.guide-links a:hover{border-color:var(--accent-ink)}
 .foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid var(--rule);padding-top:16px;padding-bottom:30px;font-size:.82rem;color:#5a6360}
 .foot a{color:var(--accent-ink)}
 .guide-nav{display:flex;gap:18px;flex-wrap:wrap;padding-top:12px;padding-bottom:12px;border-bottom:1px solid var(--rule);font-family:var(--mono);font-size:.76rem}
