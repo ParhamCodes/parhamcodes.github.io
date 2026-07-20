@@ -79,6 +79,7 @@ dialog h2{font-family:var(--display);margin-bottom:14px}
 .csv-sample{display:block;background:#f1efe8;border:1px solid var(--rule);border-radius:4px;padding:13px 15px;margin:18px 0 22px;overflow-x:auto;font-family:var(--mono);font-size:.78rem;line-height:1.7;white-space:pre}
 .article-cta{border-top:2px solid var(--ink);margin-top:32px;padding-top:24px}
 .article-cta h2{margin-top:0}
-.article-cta .btn{display:inline-block;text-decoration:none;margin-top:2px}
+.article-cta .btn{display:inline-block;text-decoration:none;margin-top:2px;color:#fff}
+.article-cta .btn:hover{color:#fff}
 @media(max-width:640px){.how{grid-template-columns:1fr}.result-head{flex-direction:column}.faq{padding:22px 20px}.faq-item{grid-template-columns:1fr;gap:7px}.guide-nav{gap:10px 16px}.article{margin:24px auto 36px;padding:28px 22px}.article h1{font-size:2rem}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
