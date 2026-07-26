@@ -111,6 +111,8 @@ $("copyBtn").textContent="Copied";
 setTimeout(()=>$("copyBtn").textContent="Copy for Excel",1500);
 };
 $("unlockBtn").onclick=()=>$("payDialog").showModal();
+$("unlockAnytime").onclick=()=>$("payDialog").showModal();
+if(unlocked())$("unlockLine").hidden=true;
 $("copyAddr").onclick=()=>{navigator.clipboard.writeText(PAY_ADDR);$("copyAddr").textContent="copied";setTimeout(()=>$("copyAddr").textContent="copy",1500)};
 async function rpc(method,params){
 for(const url of RPCS){
@@ -136,6 +138,7 @@ if(!log){st.textContent="no USDT transfer to our address in that tx";return}
 const amount=parseInt(log.data,16)/1e18;
 if(amount<6.9){st.textContent=`only ${amount.toFixed(2)} USDT received, need 7`;return}
 localStorage.setItem("s2c_license",hash);
+$("unlockLine").hidden=true;
 st.textContent="verified. unlocked forever on this browser, keep the hash as your key.";
 setTimeout(()=>{$("payDialog").close();renderResult()},1200);
 }catch(err){st.textContent="verification error: "+err.message}
