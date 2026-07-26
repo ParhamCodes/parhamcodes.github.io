@@ -51,7 +51,7 @@ td.pos{color:var(--accent-ink)}
 .faq-item dt{font-family:var(--display);font-size:1.02rem;font-weight:600;line-height:1.4}
 .faq-item dd{color:#434b47;font-size:.9rem}
 .faq-item a{color:var(--accent-ink);overflow-wrap:anywhere}
-dialog{border:2px solid var(--ink);border-radius:6px;padding:26px;max-width:520px;width:92%}
+dialog{border:2px solid var(--ink);border-radius:6px;padding:26px;max-width:520px;width:92%;margin:auto}
 dialog::backdrop{background:rgba(28,35,32,.45)}
 dialog h2{font-family:var(--display);margin-bottom:14px}
 .paysteps{padding-left:20px;margin-bottom:16px}
